@@ -1,0 +1,77 @@
+<ion-header-bar class="bar bar-stable title">
+    <h1 class="title">News Feed</h1>
+    <div class="buttons">
+        <button class="button button-icon ion-android-search" 
+                ng-click="vm.showFilterBar()"></button>
+		<button class="button button-icon ion-person-add" 
+                ng-click="vm.showFilterBar()"></button>
+    </div>      
+  </ion-header-bar>
+<div class="tabs-striped tabs-top tabs-background-light tabs-color-positive-dark">
+<div class="tabs">
+  <a class="tab-item active" href="#">
+    <i class="icon ion-card"></i>
+    Test
+  </a>
+  <a class="tab-item" href="#/tab/friends">
+    <i class="icon ion-person-stalker" ></i>
+    Favorites
+  </a>
+  <a class="tab-item" href="#">
+    <i class="icon ion-chatbubbles"></i>
+    Settings
+  </a>
+  <a class="tab-item" href="#">
+    <i class="icon ion-earth"></i>
+    Settings
+  </a>
+  <a class="tab-item" href="#">
+    <i class="icon ion-navicon"></i>
+    Settings
+  </a>
+</div>
+
+    <ion-content class="padding has-tabs-top" >
+        <ion-refresher
+                pulling-text="Loading more Post..."
+                on-refresh="doRefresh()">
+        </ion-refresher>
+      <ion-list >
+
+          <ion-item class="discovery-item" ng-repeat="feed in feeds" type="item-text-wrap" >
+
+
+                  <div class="item item-avatar">
+                      <img class="head-img" ng-src="{{feed.profilePic}}">
+                      <h2><b>{{feed.name}}</b></h2>
+                      <p am-time-ago="{{feed.timeStamp}}"></p>
+                  </div>
+
+                  <div class="item item-body">
+						<p>
+                          {{feed.status}}
+                      </p>
+                      <img class="feed-content-img" ng-src="{{feed.image}}">
+                      
+                      <p>
+                          <b><a href="#" class="subdued">1 likes</a>
+                          <b><a href="#" class="subdued">5 Comments</a>
+                      </p>
+                  </div>
+
+          <div class="buttons-share">
+				<button class="button button-icon icon ion-thumbsup">Like</button>
+				<button class="button button-icon ion-chatbox">Comment</button>
+				<button class="button button-icon ion-reply-all">Share</button>
+		</div> 
+					
+          </ion-item>
+      </ion-list>
+        <ion-infinite-scroll
+                if="!noMoreItemsAvailable"
+                on-infinite="loadMore(10)"
+                icon="ion-loading-c"
+                distance="1%">
+        </ion-infinite-scroll>
+    </ion-content>
+</ion-view>

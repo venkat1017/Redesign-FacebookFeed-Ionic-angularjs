@@ -1,0 +1,73 @@
+/* Empty. Add your own CSS if you like */
+.discovery-item {
+    /*height: 100%;*/
+
+}
+
+.head-img {
+    width: 48px;
+    height: 48px;
+    float: left;
+    margin-top: 0px;
+    margin-right: 8px;
+}
+
+.feed-content-img {
+    width: 110%;
+    height: 250px;
+    margin-left: -17px;
+    margin-top: 11px;
+}
+.feed-title{
+	background-colot:blue;
+	text-align:left;
+
+}
+.bar.bar-stable .title {
+    color: white;
+    background: #4C5E9E;
+}
+.item-body h1, .item-body h2, .item-body h3, .item-body h4, .item-body h5, .item-body h6, .item-body p {
+    margin-top: -2px;
+    margin-bottom: 23px;
+}
+.discovery-item {
+    /* height: 100%; */
+    background-color: #fff;
+}
+.bar.bar-stable .title {
+    color: white;
+    background: #4C5E9E;
+    text-align: left;
+    font-weight: bold;
+    font-size: 21px;
+}
+.bar.bar-stable {
+    border-color: #b2b2b2;
+    background-color: #4C5E9E;
+    background-image: linear-gradient(0deg, #b2b2b2, #b2b2b2 50%, transparent 50%);
+    color: #444;
+	height:50px;
+	left: 0px;
+    right: 88px;
+}
+.item-body p {
+    margin-top: 11px;
+    margin-bottom: 1px;
+}
+.bar-stable .button.button-icon {
+    border-color: transparent;
+    background: none;
+    color: #fff;
+}
+.bar .title {
+	margin:0px -42px;
+}
+.button:before{
+  margin: 0 5px;
+}
+.button-icon {
+    -webkit-transition: opacity 0.1s;
+    -moz-transition: opacity 0.1s;
+    transition: opacity 0.1s;
+    padding: 0px 20px;
